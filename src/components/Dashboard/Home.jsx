@@ -76,7 +76,7 @@ const Dashboard = () => {
   return (
     <div
       className="min-h-screen bg-cover bg-center p-8"
-      style={{ backgroundImage: "url('/public/Home.png')" }}
+      style={{ backgroundImage: "url('/Home.png')" }}
     >
         <h1
         className="text-5xl text-center font-extrabold mb-8 tracking-widest"
