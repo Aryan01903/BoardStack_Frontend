@@ -34,7 +34,7 @@ const Dashboard = () => {
 
   const fetchAuditLogs = async () => {
     try {
-      const res = await axiosInstance.get("/api/auditLogs");
+      const res = await axiosInstance.get("/api/audit");
       setAuditLogs(res.data.logs || []);
     } catch (err) {
       console.error("Audit log fetch error:", err);
