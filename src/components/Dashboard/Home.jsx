@@ -34,7 +34,7 @@ const Dashboard = () => {
 
   const fetchAuditLogs = async () => {
     try {
-      const res = await axiosInstance.get("/api/audit");
+      const res = await axiosInstance.get("/audit");
       setAuditLogs(res.data.logs || []);
     } catch (err) {
       console.error("Audit log fetch error:", err);
@@ -62,7 +62,7 @@ const Dashboard = () => {
     if (!inviteEmail.trim()) return;
     try {
       setInviteLoading(true);
-      await axiosInstance.post("/invites/send", { email: inviteEmail.trim() });
+      await axiosInstance.post("/auth/accept-invite", { email: inviteEmail.trim() });
       setInviteEmail("");
       alert("Invite sent successfully!");
     } catch (err) {
